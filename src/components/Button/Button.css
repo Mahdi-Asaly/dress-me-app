@@ -1,0 +1,13 @@
+.btn___title button {
+  background-color: rgb(236, 236, 236);
+  width: 300px;
+  border: 2px solid black;
+  height: 50px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.btn___title button:hover {
+  background-color: rgb(174, 245, 108);
+}
