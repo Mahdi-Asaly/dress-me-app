@@ -11,9 +11,11 @@ class Store {
   brand = "";
   steps = 0;
   constructor() {
-    console.log("constructor");
     makeAutoObservable(this);
   }
+  setSteps = (value) => {
+    this.steps = value;
+  };
   setSize = (size) => {
     this.size = size;
   };

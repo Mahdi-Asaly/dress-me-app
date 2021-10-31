@@ -3,21 +3,19 @@
   flex-direction: row;
   color: red;
 }
-.items___content {
-  display: flex;
-  flex-direction: row;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
+
 .item___container {
   display: flex;
-  background-color: wheat;
+  background-color: rgb(239, 241, 219);
   border: 2px solid black;
-  width: 100px;
+  border-radius: 10px;
+  width: 600px;
   margin: 10px;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+}
+.item___colors {
 }
