@@ -11,6 +11,19 @@
   cursor: pointer;
   font-family: Geneva, Verdana, sans-serif;
 }
+.bar____item h2 a {
+  color: White;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Geneva, Verdana, sans-serif;
+}
+.bar____item h2:hover {
+  color: rgb(216, 55, 55);
+}
+
+.bar____item h2 a:hover {
+  color: rgb(202, 56, 56);
+}
 .bar___items {
   display: flex;
   flex-direction: row;

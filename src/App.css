@@ -1,13 +1,24 @@
 .App {
   text-align: center;
   height: 100vh;
-  background-color: rgb(110, 130, 246);
+  background-color: rgb(158, 170, 238);
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
+.home___pending h2 {
+  color: rgb(175, 35, 35);
+}
+.home____container {
+  display: flex;
+  flex-direction: column;
+}
+.home____buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .app___title {
   font-size: 50px;
   border-radius: 30px;
@@ -17,5 +28,6 @@
 }
 .app___container {
   margin: 5px;
+  width: 100%;
   height: 100vh;
 }

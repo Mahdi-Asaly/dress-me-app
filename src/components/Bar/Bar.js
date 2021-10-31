@@ -5,7 +5,9 @@ export default function Bar() {
     <div className="bar____container">
       <div className="bar___items">
         <div className="bar____item">
-          <h2>Dress-App</h2>
+          <h2>
+            <a href="/">Dress-App</a>
+          </h2>
         </div>
         <div></div>
         <div className="bar____item">
