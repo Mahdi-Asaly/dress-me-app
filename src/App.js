@@ -28,15 +28,15 @@ const App = observer(() => {
                   <div className="home____buttons">
                     <Link to="/Shoes">
                       {" "}
-                      <Button title="Shoes">Shoes</Button>
+                      <Button title="Shoes" />
                     </Link>
                     <Link to="/Pants">
                       {" "}
-                      <Button title="Pants">Pants</Button>
+                      <Button title="Pants" />
                     </Link>
                     <Link to="/TShirt">
                       {" "}
-                      <Button title="Pants">TShirt</Button>
+                      <Button title="Shirt" />
                     </Link>
                   </div>
                   {store.steps === 3 ? (

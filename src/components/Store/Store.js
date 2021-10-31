@@ -1,19 +1,22 @@
 import { makeAutoObservable } from "mobx";
+import { toJS } from "mobx";
 
 class Store {
   data = []; //all the data which received from the API.
-  id;
-  type;
-  name;
-  color;
-  size;
-  brand;
+  id = "";
+  type = "";
+  name = "";
+  color = "";
+  size = "";
+  brand = "";
   steps = 0;
   constructor() {
     console.log("constructor");
     makeAutoObservable(this);
   }
-
+  setSize = (size) => {
+    this.size = size;
+  };
   setType = (type) => {
     this.type = type;
   };
@@ -32,8 +35,26 @@ class Store {
   getShoes() {
     return this.data.filter((x) => x.type === "shoes");
   }
+  getPants() {
+    return this.data.filter((x) => x.type === "pants");
+  }
+  getTShirts() {
+    return this.data.filter((x) => x.type === "shirt");
+  }
+  getShoesByName() {
+    const _shoes = this.getShoes();
+    const names = _shoes.map((x) => {
+      return x.id + ";" + x.name;
+    });
+    return names;
+  }
   setData(data) {
     this.data = data;
+  }
+  getItemById(id) {
+    const _data = toJS(this.data);
+    const parsedData = JSON.parse(JSON.stringify(_data));
+    return parsedData.filter((x) => x.id == id);
   }
 }
 

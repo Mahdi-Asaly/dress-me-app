@@ -1,0 +1,23 @@
+.item___name {
+  display: flex;
+  flex-direction: row;
+  color: red;
+}
+.items___content {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.item___container {
+  display: flex;
+  background-color: wheat;
+  border: 2px solid black;
+  width: 100px;
+  margin: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}

@@ -1,0 +1,14 @@
+.shoes___title h2 {
+  color: rgb(212, 12, 12);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+.shoes___amount {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.shoes___container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
