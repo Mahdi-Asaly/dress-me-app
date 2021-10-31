@@ -2,7 +2,20 @@
   text-align: center;
   height: 100vh;
   background-color: rgb(110, 130, 246);
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .app___title {
+  font-size: 50px;
+  border-radius: 30px;
+  border: 1px black solid;
+  background-color: greenyellow;
+  width: 600px;
+}
+.app___container {
+  margin: 5px;
+  height: 100vh;
 }

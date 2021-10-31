@@ -1,0 +1,19 @@
+.bar____container {
+  background-color: rgb(14, 3, 34);
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  font-size: 20px;
+}
+.bar____item h2 {
+  color: White;
+  cursor: pointer;
+  font-family: Geneva, Verdana, sans-serif;
+}
+.bar___items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}

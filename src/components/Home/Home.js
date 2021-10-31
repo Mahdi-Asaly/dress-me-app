@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 export default function Home() {
   return (
     <Router>
-      <div>
+      <div className="home____container">
         <Link to="/Shoes">
           {" "}
           <Button title="Shoes">Shoes</Button>
@@ -18,7 +18,10 @@ export default function Home() {
           {" "}
           <Button title="Pants">Pants</Button>
         </Link>
-
+        <Link to="/TShirt">
+          {" "}
+          <Button title="Pants">TShirt</Button>
+        </Link>
         <hr />
         <Switch>
           <Route path="/Shoes">
@@ -26,6 +29,9 @@ export default function Home() {
           </Route>
           <Route exact path="/Pants">
             <Pants />
+          </Route>
+          <Route exact path="/TShirt">
+            <TShirt />
           </Route>
         </Switch>
       </div>
