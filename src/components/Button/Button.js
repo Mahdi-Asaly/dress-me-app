@@ -21,6 +21,7 @@ export default function Button(props) {
         style={{ backgroundColor: `${props.title}` }}
         role="button"
         onClick={handleClick}
+        disabled={props.status}
       >
         {props.title}
       </button>

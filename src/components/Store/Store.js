@@ -31,9 +31,7 @@ class Store {
     makeAutoObservable(this);
   }
   ///////shirt///////
-  setShirtSteps = (value) => {
-    this.shirtStep = value;
-  };
+
   setShirtSize = (size) => {
     this.shirtSize = size;
   };
@@ -54,9 +52,7 @@ class Store {
   };
 
   ///////pants///////
-  setPantSteps = (value) => {
-    this.pantStep = value;
-  };
+
   setPantSize = (size) => {
     this.pantSize = size;
   };
@@ -78,9 +74,6 @@ class Store {
 
   ///////Shoes///////
 
-  setSteps = (value) => {
-    this.steps = value;
-  };
   setSize = (size) => {
     this.size = size;
   };
@@ -129,7 +122,18 @@ class Store {
     });
     return names;
   }
-
+  getSteps() {
+    let counter = 0;
+    if (this.name != "") {
+      counter += 1;
+    } else if (this.pantName != "") {
+      counter += 1;
+    } else if (this.shirtName != "") {
+      counter += 1;
+    }
+    this.steps = counter;
+    return this.steps;
+  }
   setData(data) {
     this.data = data;
   }

@@ -25,32 +25,34 @@ const App = observer(() => {
                 <Route path="/" exact>
                   {/* HOME PAGE */}
                   <div className="home____sets">
-                    <h2>Steps done till now: {store.steps}</h2>
+                    <h2>Steps done till now: {store.getSteps()}</h2>
                   </div>
                   <div className="home____buttons">
                     <Link to="/Shoes">
                       {" "}
-                      <Button title="Shoes" />
+                      <Button title="נעליים" />
                     </Link>
                     <Link to="/Pants">
                       {" "}
-                      <Button title="Pants" />
+                      <Button title="מכנסיים" />
                     </Link>
                     <Link to="/TShirt">
                       {" "}
-                      <Button title="Shirt" />
+                      <Button title="חולצות" />
                     </Link>
                   </div>
-                  {store.steps === 3 ? (
+                  {store.name && store.shirtName && store.pantName ? (
                     <div className="home___success">
                       <Link to="/Success">
                         {" "}
-                        <Button title="Sucess" />
+                        <Button title="סיום" />
                       </Link>
                     </div>
                   ) : (
                     <div className="home___pending">
-                      <h2>Dress Status Not Finished Yet.</h2>
+                      <h2>
+                        <Button title="סיום" status="true" />
+                      </h2>
                     </div>
                   )}
                 </Route>
