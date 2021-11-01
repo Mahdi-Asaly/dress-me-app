@@ -7,7 +7,6 @@ import { observer } from "mobx-react";
 const ItemList = (props) => {
   const [append, setAppend] = useState(false);
   const [popUp, setPopUp] = useState(false);
-
   const handleColors = (value) => {
     switch (props.type) {
       case "shoes":

@@ -16,3 +16,7 @@
 }
 .shoes____container {
 }
+.main__shoes {
+  display: flex;
+  flex-direction: column;
+}
