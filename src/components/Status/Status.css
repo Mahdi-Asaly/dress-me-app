@@ -5,5 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 930px;
+  padding: 3px;
   margin: 15px;
+  background-color: rgb(232, 236, 0);
 }
