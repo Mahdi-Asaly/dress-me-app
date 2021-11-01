@@ -13,7 +13,7 @@ function Bar() {
         </div>
         <div></div>
         <div className="bar____item">
-          <h2>Menu</h2>
+          <h2>Dress-App</h2>
         </div>
       </div>
     </div>

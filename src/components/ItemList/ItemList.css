@@ -3,19 +3,48 @@
   flex-direction: row;
   color: red;
 }
-
+h2 {
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+.item___brand h1 {
+  color: rgb(7, 205, 223);
+}
+.item___brand h2 {
+  color: rgb(195, 0, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.brand___name h1 {
+  color: rgb(7, 205, 223);
+}
+.brand___name h2 {
+  color: rgb(195, 0, 255);
+}
+#color___selection {
+  color: rgb(7, 205, 223);
+}
 .item___container {
   display: flex;
   background-color: rgb(253, 253, 251);
   border: 2px solid black;
   border-radius: 10px;
-  width: 600px;
+  width: 800px;
   margin: 10px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
 }
 .item___colors {
+  display: flex;
+}
+.item___sizes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
