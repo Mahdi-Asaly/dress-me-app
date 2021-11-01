@@ -15,7 +15,6 @@ const ItemList = (props) => {
 
   function sizeHandler(value) {
     store.setSize(value);
-    //now you should open popup.
     setPopUp(true);
   }
 

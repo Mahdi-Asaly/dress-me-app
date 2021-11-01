@@ -1,12 +1,14 @@
 import React from "react";
 import "./Bar.css";
-export default function Bar() {
+import { withRouter } from "react-router";
+
+function Bar() {
   return (
     <div className="bar____container">
       <div className="bar___items">
         <div className="bar____item">
           <h2>
-            <a href="/">Dress-App</a>
+            <div>Dress-App</div>
           </h2>
         </div>
         <div></div>
@@ -17,3 +19,4 @@ export default function Bar() {
     </div>
   );
 }
+export default Bar;

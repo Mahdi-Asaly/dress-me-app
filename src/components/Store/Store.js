@@ -50,6 +50,14 @@ class Store {
     });
     return names;
   }
+  getPantsByName() {
+    const _pants = this.getPants();
+    const names = _pants.map((x) => {
+      return x.id + ";" + x.name;
+    });
+    return names;
+  }
+
   setData(data) {
     this.data = data;
   }

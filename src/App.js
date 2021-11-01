@@ -9,17 +9,20 @@ import Button from "./components/Button/Button";
 import Shoes from "./components/Shoes/Shoes";
 import TShirt from "./components/TShirt/TShirt";
 import Pants from "./components/Pants/Pants";
+import Success from "./components/Success/Success";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = observer(() => {
   return (
     <>
-      <Bar />
-      <div className="App">
-        <div className="app___container">
-          <Router>
-            <div className="home____container">
-              <Switch>
+      <Router>
+        <Switch>
+          <div className="App">
+            <div className="app___container">
+              <div className="home____container">
+                <Link to="/">
+                  <Bar />
+                </Link>
                 <Route path="/" exact>
                   {/* HOME PAGE */}
                   <div className="home____sets">
@@ -41,7 +44,10 @@ const App = observer(() => {
                   </div>
                   {store.steps === 3 ? (
                     <div className="home___success">
-                      <Button title="Finish" />{" "}
+                      <Link to="/Success">
+                        {" "}
+                        <Button title="Sucess" />
+                      </Link>
                     </div>
                   ) : (
                     <div className="home___pending">
@@ -49,6 +55,7 @@ const App = observer(() => {
                     </div>
                   )}
                 </Route>
+
                 <Route path="/Shoes">
                   <Shoes />
                 </Route>
@@ -58,12 +65,15 @@ const App = observer(() => {
                 <Route exact path="/TShirt">
                   <TShirt />
                 </Route>
-              </Switch>
+                <Route exact path="/Success">
+                  <Success />
+                </Route>
+              </div>
             </div>
-          </Router>
-        </div>
-        <Footer />
-      </div>
+            <Footer />
+          </div>
+        </Switch>
+      </Router>
     </>
   );
 });
