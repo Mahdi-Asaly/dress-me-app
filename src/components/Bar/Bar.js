@@ -12,9 +12,7 @@ function Bar() {
           </h2>
         </div>
         <div></div>
-        <div className="bar____item">
-          <h2>Dress-App</h2>
-        </div>
+        <div className="bar____item"></div>
       </div>
     </div>
   );

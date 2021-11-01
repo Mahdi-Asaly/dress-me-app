@@ -13,6 +13,7 @@
 .home____container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .home____buttons {
   display: flex;
@@ -20,13 +21,24 @@
   justify-content: center;
 }
 .app___title {
-  font-size: 50px;
+  font-size: 40px;
   border-radius: 30px;
-  border: 1px black solid;
-  background-color: greenyellow;
+  border: 2px black solid;
+  background-color: rgb(225, 253, 63);
   width: 600px;
+  margin: 10px;
+  padding: 10px;
 }
 .app___container {
   width: 100%;
   height: 100vh;
+}
+.home____status {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
 }

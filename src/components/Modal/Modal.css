@@ -9,7 +9,7 @@
 .modal-main {
   position: fixed;
   background: white;
-  width: 80%;
+  width: 50%;
   height: auto;
   top: 50%;
   left: 50%;
@@ -17,12 +17,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 5px solid rgba(30, 160, 25, 0.52);
+  margin: 10px;
 }
 .modal button {
-  background-color: rgb(245, 207, 207);
-  width: 100%;
+  background-color: rgb(238, 255, 0);
+  width: 160px;
 }
 .modal button:hover {
-  background-color: rgb(255, 230, 87);
+  background-color: rgb(32, 248, 68);
   cursor: pointer;
+}
+.action___handler {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.button___handler {
+  margin: 10px;
 }

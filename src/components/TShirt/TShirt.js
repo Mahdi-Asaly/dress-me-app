@@ -1,10 +1,13 @@
 import React from "react";
-import Dropdown from "react-dropdown";
 import store from "../Store/Store";
 import { observer } from "mobx-react";
 import ItemList from "../ItemList/ItemList";
+import Select from "react-select";
 
 const TShirt = () => {
+  let customOptions = store.data.map((x) => {
+    return { value: x.id + ";" + x.name, label: x.name };
+  });
   function onSelect(e) {
     store.setShirtName(e.value);
     store.setShirtId(e.value.split(";")[0]);
@@ -19,27 +22,29 @@ const TShirt = () => {
       <div className="shoes___amount">
         נמצאו {store.getTShirts().length} פרטים לרשותך
       </div>
-      <div className="shoes___container">
+      <div className="shoes___main___container">
         <div className="shoes____dropsdown">
-          <Dropdown
-            options={[...store.getShirtsByName()]}
-            onChange={onSelect}
+          <Select
             placeholder="אנא בחר מוצר"
+            onChange={onSelect}
+            options={customOptions}
           />
         </div>
         <div className="shoes____container">
-          {!store.shirtName == "" ? (
-            <div>
-              <ItemList
-                type={"shirts"}
-                id={store.shirtId}
-                item={store.shirtName}
-                items={store.data}
-              />
-            </div>
-          ) : (
-            <div></div>
-          )}
+          <div className="shoes____details">
+            {!store.shirtName == "" ? (
+              <div>
+                <ItemList
+                  type={"shirts"}
+                  id={store.shirtId}
+                  item={store.shirtName}
+                  items={store.data}
+                />
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 .success___container {
-  background-color: rgb(188, 236, 161);
+  font-size: 35px;
+  height: 100%;
 }
 .error___404 {
   height: 100vh;
@@ -16,4 +17,61 @@
 }
 .error___404 h3 {
   font-size: 60px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  flex-direction: column;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid;
+  background-color: yellow;
+}
+.table * {
+  cursor: pointer;
+}
+.table-header {
+  display: flex;
+  width: 100%;
+  background: rgb(21, 255, 126);
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+}
+
+.table-data,
+.header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.header__item {
+  text-transform: uppercase;
 }

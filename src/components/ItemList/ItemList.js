@@ -44,10 +44,15 @@ const ItemList = (props) => {
   }
 
   function modalHandler(e) {
+    console.log("saved");
     setPopUp(false);
     store.setSteps();
   }
 
+  function closeHandler(e) {
+    console.log("closed");
+    setPopUp(false);
+  }
   return (
     <div className="item___container">
       <div className="shoes___image">
@@ -62,6 +67,7 @@ const ItemList = (props) => {
         <Modal
           text={"האם אתה רוצה להוסיף את הפריט לרשימה"}
           onClose={modalHandler}
+          onModalClose={closeHandler}
         />
       ) : (
         <div></div>
@@ -90,7 +96,7 @@ const ItemList = (props) => {
 
           {append === true ? (
             <div>
-              אנא בחר מידה
+              <h2 id="size___selection">אנא בחר מידה</h2>
               <div className="item___sizes">
                 {x.sizes.map((size) => (
                   <Button

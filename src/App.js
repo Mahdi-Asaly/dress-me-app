@@ -25,8 +25,11 @@ const App = observer(() => {
                 </Link>
                 <Route path="/" exact>
                   <div className="home____status">
+                    <div className="app___title">
+                      <h2>Dress Application</h2>
+                    </div>
                     <h2>
-                      סטטוס לבוש: <Status />
+                      סטטוס לבוש <Status />
                     </h2>
                   </div>
                   <div className="home____buttons">

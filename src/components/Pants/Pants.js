@@ -17,7 +17,7 @@ const Pants = () => {
       <div className="shoes___amount">
         נמצאו {store.getPants().length} פרטים לרשותך
       </div>
-      <div className="shoes___container">
+      <div className="shoes___main___container">
         <div className="shoes____dropsdown">
           <Dropdown
             options={[...store.getPantsByName()]}
@@ -26,18 +26,20 @@ const Pants = () => {
           />
         </div>
         <div className="shoes____container">
-          {!store.pantName == "" ? (
-            <div>
-              <ItemList
-                type={"pants"}
-                id={store.pantId}
-                item={store.pantName}
-                items={store.data}
-              />
-            </div>
-          ) : (
-            <div></div>
-          )}
+          <div className="shoes____details">
+            {!store.pantName == "" ? (
+              <div>
+                <ItemList
+                  type={"pants"}
+                  id={store.pantId}
+                  item={store.pantName}
+                  items={store.data}
+                />
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </div>

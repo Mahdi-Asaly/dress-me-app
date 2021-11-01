@@ -1,0 +1,9 @@
+.status____container {
+  display: flex;
+  border: 5px solid rgb(94, 9, 206);
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 930px;
+  margin: 15px;
+}
