@@ -10,7 +10,7 @@ class Store {
   size = "";
   brand = "";
   steps = 0;
-
+  cookie = false;
   pantName = "";
   pantId = "";
   pantColor = "";
@@ -29,6 +29,7 @@ class Store {
 
   constructor() {
     makeAutoObservable(this);
+    this.fetchCookies();
   }
   ///////shirt///////
 
@@ -132,6 +133,32 @@ class Store {
     }
     return this.steps;
   }
+
+  clearAll() {
+    this.id = "";
+    this.type = "";
+    this.name = "";
+    this.color = "";
+    this.size = "";
+    this.brand = "";
+    this.steps = 0;
+    //this.cookie = false;
+    this.pantName = "";
+    this.pantId = "";
+    this.pantColor = "";
+    this.pantSize = "";
+    this.pantType = "";
+    this.pantStep = 0;
+    this.pantBrand = "";
+
+    this.shirtName = "";
+    this.shirtId = "";
+    this.shirtColor = "";
+    this.shirtSize = "";
+    this.shirtType = "";
+    this.shirtStep = 0;
+    this.shirtBrand = "";
+  }
   setData(data) {
     this.data = data;
   }
@@ -139,6 +166,59 @@ class Store {
     const _data = toJS(this.data);
     const parsedData = JSON.parse(JSON.stringify(_data));
     return parsedData.filter((x) => x.id == id);
+  }
+  fetchCookies() {
+    //shoes cookies
+    if (localStorage.getItem("shoes_id")) {
+      this.setId(localStorage.getItem("shoes_id"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("shoes_name")) {
+      this.setName(localStorage.getItem("shoes_name"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("shoes_color")) {
+      this.setColor(localStorage.getItem("shoes_color"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("shoes_size")) {
+      this.setSize(localStorage.getItem("shoes_size"));
+      this.cookie = true;
+    }
+    //pants cookies
+    if (localStorage.getItem("pants_id")) {
+      this.setPantId(localStorage.getItem("pants_id"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("pants_name")) {
+      this.setPantName(localStorage.getItem("pants_name"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("pants_color")) {
+      this.setPantColor(localStorage.getItem("pants_color"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("pants_size")) {
+      this.setPantSize(localStorage.getItem("pants_size"));
+      this.cookie = true;
+    }
+    //shirts cookies
+    if (localStorage.getItem("shirts_id")) {
+      this.setShirtId(localStorage.getItem("shirts_id"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("shirts_name")) {
+      this.setShirtName(localStorage.getItem("shirts_name"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("shirts_color")) {
+      this.setShirtColor(localStorage.getItem("shirts_color"));
+      this.cookie = true;
+    }
+    if (localStorage.getItem("shirts_size")) {
+      this.setShirtSize(localStorage.getItem("shirts_size"));
+      this.cookie = true;
+    }
   }
 }
 

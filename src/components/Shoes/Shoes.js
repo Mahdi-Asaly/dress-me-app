@@ -10,6 +10,8 @@ const Shoes = () => {
   function onSelect(e) {
     store.setName(e.value);
     store.setId(e.value.split(";")[0]);
+    localStorage.setItem("shoes_name", e.value);
+    localStorage.setItem("shoes_id", e.value.split(";")[0]);
   }
   return (
     <div className="main__shoes">

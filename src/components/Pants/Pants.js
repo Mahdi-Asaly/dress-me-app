@@ -8,6 +8,8 @@ const Pants = () => {
   function onSelect(e) {
     store.setPantName(e.value);
     store.setPantId(e.value.split(";")[0]);
+    localStorage.setItem("pants_name", e.value);
+    localStorage.setItem("pants_id", e.value.split(";")[0]);
   }
   return (
     <div className="main__shoes">

@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import store from "../Store/Store";
 import Modal from "../Modal/Moda";
 import { observer } from "mobx-react";
+
 const ItemList = (props) => {
   const [append, setAppend] = useState(false);
   const [popUp, setPopUp] = useState(false);
@@ -11,14 +12,17 @@ const ItemList = (props) => {
     switch (props.type) {
       case "shoes":
         store.setColor(value);
+        localStorage.setItem("shoes_color", value);
         setAppend(true);
         break;
       case "shirts":
         store.setShirtColor(value);
+        localStorage.setItem("shirts_color", value);
         setAppend(true);
         break;
       case "pants":
         store.setPantColor(value);
+        localStorage.setItem("pants_color", value);
         setAppend(true);
         break;
       default:
@@ -29,15 +33,18 @@ const ItemList = (props) => {
     switch (props.type) {
       case "shoes":
         setPopUp(true);
+        localStorage.setItem("shoes_size", value);
         store.setSize(value);
         break;
       case "shirts":
         store.setShirtSize(value);
+        localStorage.setItem("shirts_size", value);
         setPopUp(true);
         break;
       case "pants":
         setPopUp(true);
         store.setPantSize(value);
+        localStorage.setItem("pants_size", value);
         break;
       default:
     }
@@ -56,7 +63,7 @@ const ItemList = (props) => {
   return (
     <div className="item___container">
       <div className="shoes___image">
-        <div class="left">
+        <div className="left">
           <img
             src={"https://www.dropbox.com/s/e928cht0h5crcn4/shoe.png?raw=1"}
             alt="Logo"
@@ -73,7 +80,7 @@ const ItemList = (props) => {
         <div></div>
       )}
       {store.getItemById(props.id).map((x) => (
-        <div className="item___append___container">
+        <div key={x.id} className="item___append___container">
           <div className="item___brand">
             <h1>מותג</h1>
             <h2>{x.brand}</h2>
@@ -87,6 +94,7 @@ const ItemList = (props) => {
           <div className="item___colors">
             {x.colors.map((color) => (
               <Button
+                key={Math.random()}
                 title={color}
                 type={"colorsClass"}
                 itemColor={handleColors}
@@ -100,6 +108,7 @@ const ItemList = (props) => {
               <div className="item___sizes">
                 {x.sizes.map((size) => (
                   <Button
+                    key={Math.random()}
                     title={size}
                     type={"sizeHandle"}
                     onSizeClick={sizeHandler}

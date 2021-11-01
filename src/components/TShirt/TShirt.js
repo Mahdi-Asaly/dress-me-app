@@ -11,8 +11,8 @@ const TShirt = () => {
   function onSelect(e) {
     store.setShirtName(e.value);
     store.setShirtId(e.value.split(";")[0]);
-    console.log(store.shirtName);
-    console.log(store.shirtId);
+    localStorage.setItem("shirts_name", e.value);
+    localStorage.setItem("shirts_id", e.value.split(";")[0]);
   }
   return (
     <div className="main__shoes">
