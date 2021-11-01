@@ -5,7 +5,6 @@ import ItemList from "../ItemList/ItemList";
 import { observer } from "mobx-react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Shoes = () => {
   function onSelect(e) {

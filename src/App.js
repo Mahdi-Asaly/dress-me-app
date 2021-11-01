@@ -9,6 +9,7 @@ import Shoes from "./components/Shoes/Shoes";
 import TShirt from "./components/TShirt/TShirt";
 import Pants from "./components/Pants/Pants";
 import Success from "./components/Success/Success";
+import Status from "./components/Status/Status";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = observer(() => {
@@ -23,28 +24,25 @@ const App = observer(() => {
                   <Bar />
                 </Link>
                 <Route path="/" exact>
-                  {/* HOME PAGE */}
-                  <div className="home____sets">
-                    <h2>Steps done till now: {store.getSteps()}</h2>
+                  <div className="home____status">
+                    <h2>
+                      סטטוס לבוש: <Status />
+                    </h2>
                   </div>
                   <div className="home____buttons">
                     <Link to="/Shoes">
-                      {" "}
                       <Button title="נעליים" />
                     </Link>
                     <Link to="/Pants">
-                      {" "}
                       <Button title="מכנסיים" />
                     </Link>
                     <Link to="/TShirt">
-                      {" "}
                       <Button title="חולצות" />
                     </Link>
                   </div>
                   {store.name && store.shirtName && store.pantName ? (
                     <div className="home___success">
                       <Link to="/Success">
-                        {" "}
                         <Button title="סיום" />
                       </Link>
                     </div>

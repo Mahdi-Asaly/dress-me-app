@@ -28,7 +28,7 @@ const TShirt = () => {
           />
         </div>
         <div className="shoes____container">
-          {!store.pantName == "" ? (
+          {!store.shirtName == "" ? (
             <div>
               <ItemList
                 type={"shirts"}

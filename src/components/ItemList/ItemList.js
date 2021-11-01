@@ -46,7 +46,7 @@ const ItemList = (props) => {
 
   function modalHandler(e) {
     setPopUp(false);
-    //store.setSteps(3);
+    store.setSteps();
   }
 
   return (

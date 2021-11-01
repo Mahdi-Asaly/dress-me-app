@@ -122,16 +122,14 @@ class Store {
     });
     return names;
   }
-  getSteps() {
-    let counter = 0;
+  setSteps() {
     if (this.name != "") {
-      counter += 1;
+      this.steps += 1;
     } else if (this.pantName != "") {
-      counter += 1;
+      this.steps += 1;
     } else if (this.shirtName != "") {
-      counter += 1;
+      this.steps += 1;
     }
-    this.steps = counter;
     return this.steps;
   }
   setData(data) {
