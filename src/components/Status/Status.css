@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: 930px;
   padding: 3px;
+  font-family: 'Courier New', Courier, monospace;
   margin: 15px;
-  background-color: rgb(232, 236, 0);
+  background-color: rgb(240, 240, 240);
 }

@@ -5,9 +5,12 @@ import ItemList from "../ItemList/ItemList";
 import Select from "react-select";
 
 const TShirt = () => {
+  //in order to use the above react hook , we should convert the data to corresponding api. in order to view the list in Dropdown.
   let customOptions = store.data.map((x) => {
     return { value: x.id + ";" + x.name, label: x.name };
   });
+
+  //on user select we store the result in the store as well as in the user cookies.
   function onSelect(e) {
     store.setShirtName(e.value);
     store.setShirtId(e.value.split(";")[0]);

@@ -3,6 +3,7 @@ import React from "react";
 import "./Status.css";
 import store from "../Store/Store";
 const Status = () => {
+  //calculate sets(Pants) choosen by the user
   const pantsCalc = () => {
     let pants = 0;
     if (store.pantName.split() != "") {
@@ -18,6 +19,7 @@ const Status = () => {
     return pants + "/3";
   };
 
+  //calculate sets(Shirts) choosen by the user
   const shirtsCalc = () => {
     let shirts = 0;
     if (store.shirtName.split() != "") {
@@ -29,14 +31,10 @@ const Status = () => {
     if (store.shirtColor.split() != "") {
       shirts += 1;
     }
-    // if (store.shirtColor.split() != "") {
-    //   shirts += 1;
-    // }
-    // if (store.shirtSize.split() != "") {
-    //   shirts += 1;
-    // }
     return shirts + "/3";
   };
+
+  //calculate sets(Shoes) choosen by the user
   const shoesCalc = () => {
     let shoes = 0;
     if (store.name.split() != "") {

@@ -21,10 +21,12 @@
   justify-content: center;
 }
 .app___title {
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 30px;
-  border: 2px black solid;
-  background-color: rgb(225, 253, 63);
+  border: 3px rgb(17, 0, 248) solid;
+  font-family: "Times New Roman", Times, serif;
+
+  background-color: rgb(255, 164, 45);
   width: 600px;
   margin: 10px;
   padding: 10px;

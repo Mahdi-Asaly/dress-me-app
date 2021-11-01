@@ -8,6 +8,8 @@ import { observer } from "mobx-react";
 const ItemList = (props) => {
   const [append, setAppend] = useState(false);
   const [popUp, setPopUp] = useState(false);
+
+  //this function stores the value of colors and stores the result to the cookies.
   const handleColors = (value) => {
     switch (props.type) {
       case "shoes":
@@ -28,7 +30,7 @@ const ItemList = (props) => {
       default:
     }
   };
-
+  //this function stores the value of sizes and stores the result to the cookies.
   function sizeHandler(value) {
     switch (props.type) {
       case "shoes":
@@ -49,15 +51,13 @@ const ItemList = (props) => {
       default:
     }
   }
-
+  //modal handler to close the popup and store the steps done by the user
   function modalHandler(e) {
-    console.log("saved");
     setPopUp(false);
     store.setSteps();
+    window.location.href = "/";
   }
-
   function closeHandler(e) {
-    console.log("closed");
     setPopUp(false);
   }
   return (

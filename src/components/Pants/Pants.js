@@ -5,6 +5,7 @@ import ItemList from "../ItemList/ItemList";
 import Dropdown from "react-dropdown";
 
 const Pants = () => {
+  //once the user select option we store it to the cookie and to the store
   function onSelect(e) {
     store.setPantName(e.value);
     store.setPantId(e.value.split(";")[0]);
