@@ -10,9 +10,74 @@ class Store {
   size = "";
   brand = "";
   steps = 0;
+
+  pantName = "";
+  pantId = "";
+  pantColor = "";
+  pantSize = "";
+  pantType = "";
+  pantStep = 0;
+  pantBrand = "";
+
+  shirtName = "";
+  shirtId = "";
+  shirtColor = "";
+  shirtSize = "";
+  shirtType = "";
+  shirtStep = 0;
+  shirtBrand = "";
+
   constructor() {
     makeAutoObservable(this);
   }
+  ///////shirt///////
+  setShirtSteps = (value) => {
+    this.shirtStep = value;
+  };
+  setShirtSize = (size) => {
+    this.shirtSize = size;
+  };
+  setShirtType = (type) => {
+    this.shirtType = type;
+  };
+  setShirtName = (name) => {
+    this.shirtName = name;
+  };
+  setShirtBrand = (brand) => {
+    this.shirtBrand = brand;
+  };
+  setShirtColor = (color) => {
+    this.shirtColor = color;
+  };
+  setShirtId = (id) => {
+    this.shirtId = id;
+  };
+
+  ///////pants///////
+  setPantSteps = (value) => {
+    this.pantStep = value;
+  };
+  setPantSize = (size) => {
+    this.pantSize = size;
+  };
+  setPantType = (type) => {
+    this.pantType = type;
+  };
+  setPantName = (name) => {
+    this.pantName = name;
+  };
+  setPantBrand = (brand) => {
+    this.brand = brand;
+  };
+  setPantColor = (color) => {
+    this.pantColor = color;
+  };
+  setPantId = (id) => {
+    this.pantId = id;
+  };
+
+  ///////Shoes///////
+
   setSteps = (value) => {
     this.steps = value;
   };
@@ -46,6 +111,13 @@ class Store {
   getShoesByName() {
     const _shoes = this.getShoes();
     const names = _shoes.map((x) => {
+      return x.id + ";" + x.name;
+    });
+    return names;
+  }
+  getShirtsByName() {
+    const _shirts = this.getTShirts();
+    const names = _shirts.map((x) => {
       return x.id + ";" + x.name;
     });
     return names;

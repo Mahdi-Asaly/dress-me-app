@@ -9,18 +9,43 @@ const ItemList = (props) => {
   const [popUp, setPopUp] = useState(false);
 
   const handleColors = (value) => {
-    console.log("handling colors" + value);
-    setAppend(true);
+    switch (props.type) {
+      case "shoes":
+        store.setColor(value);
+        setAppend(true);
+        break;
+      case "shirts":
+        store.setShirtColor(value);
+        setAppend(true);
+        break;
+      case "pants":
+        store.setPantColor(value);
+        setAppend(true);
+        break;
+      default:
+    }
   };
 
   function sizeHandler(value) {
-    store.setSize(value);
-    setPopUp(true);
+    switch (props.type) {
+      case "shoes":
+        setPopUp(true);
+        store.setSize(value);
+        break;
+      case "shirts":
+        store.setShirtSize(value);
+        setPopUp(true);
+        break;
+      case "pants":
+        setPopUp(true);
+        store.setPantSize(value);
+        break;
+      default:
+    }
   }
 
   function modalHandler(e) {
     setPopUp(false);
-    console.log("adding item..");
     store.setSteps(3);
   }
 
@@ -36,6 +61,8 @@ const ItemList = (props) => {
       )}
       {store.getItemById(props.id).map((x) => (
         <div className="item___colors">
+          <h1>{x.id}</h1>
+          <h1>{x.type}</h1>
           <h1>{x.brand}</h1>
           <h2>אנא בחר צבע</h2>
           {x.colors.map((color) => (

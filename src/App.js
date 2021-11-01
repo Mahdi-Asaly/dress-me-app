@@ -4,7 +4,6 @@ import store from "./components/Store/Store";
 import { observer } from "mobx-react";
 import Bar from "./components/Bar/Bar";
 import Footer from "./components/Footer/Footer";
-
 import Button from "./components/Button/Button";
 import Shoes from "./components/Shoes/Shoes";
 import TShirt from "./components/TShirt/TShirt";

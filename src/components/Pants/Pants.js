@@ -6,8 +6,8 @@ import Dropdown from "react-dropdown";
 
 const Pants = () => {
   function onSelect(e) {
-    store.setName(e.value);
-    store.setId(e.value.split(";")[0]);
+    store.setPantName(e.value);
+    store.setPantId(e.value.split(";")[0]);
   }
   return (
     <div className="main__shoes">
@@ -20,15 +20,20 @@ const Pants = () => {
       <div className="shoes___container">
         <div className="shoes____dropsdown">
           <Dropdown
-            options={[...store.getShoesByName()]}
+            options={[...store.getPantsByName()]}
             onChange={onSelect}
             placeholder="אנא בחר מוצר"
           />
         </div>
         <div className="shoes____container">
-          {!store.name == "" ? (
+          {!store.pantName == "" ? (
             <div>
-              <ItemList id={store.id} item={store.name} items={store.data} />
+              <ItemList
+                type={"pants"}
+                id={store.pantId}
+                item={store.pantName}
+                items={store.data}
+              />
             </div>
           ) : (
             <div></div>

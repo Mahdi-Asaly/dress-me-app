@@ -31,7 +31,12 @@ const Shoes = () => {
         <div className="shoes____container">
           {!store.name == "" ? (
             <div>
-              <ItemList id={store.id} item={store.name} items={store.data} />
+              <ItemList
+                type={"shoes"}
+                id={store.id}
+                item={store.name}
+                items={store.data}
+              />
             </div>
           ) : (
             <div></div>

@@ -1,3 +1,19 @@
 .success___container {
-  background-color: aqua;
+  background-color: rgb(188, 236, 161);
+}
+.error___404 {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.error___404 h2 {
+  font-size: 60px;
+}
+.error___404 h3 {
+  font-size: 60px;
 }
